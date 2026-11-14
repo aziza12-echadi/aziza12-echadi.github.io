@@ -9,124 +9,17 @@ body{margin:0;background:#ff6fa5;font-family:Arial;text-align:center}
 h1{background:white;margin:0;padding:15px;color:#ff2e88}
 h2{background:#fff0f5;margin:20px 10px 5px;padding:12px;border-radius:15px;color:#ff2e88}
 .card{background:white;margin:10px;border-radius:20px;padding:10px}
-.card img{width:100%;b<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aziza - Hören</title>
-<style>
-body{margin:0;background:#ff6fa5;font-family:Arial;text-align:center}
-h1{background:white;margin:0;padding:15px;color:#ff2e88}
-h2{background:#fff0f5;margin:20px 10px 5px;padding:12px;border-radius:15px;color:#ff2e88}
-.card{background:white;margin:10px;border-radius:20px;padding:10px}
 .card img{width:100%;border-radius:15px}
 </style>
 </head>
 <body>
 <h1>🇩🇪 Telc B2 - Hören ❤️</h1>
-
 <h2>🎧 Teil 01 - Nachrichten 41-45</h2>
 <div class="card"><img src="22.jpg"></div>
 <div class="card"><img src="24.jpg"></div>
-
 <h2>🎙️ Teil 02 - Interview 46-55</h2>
 <div class="card"><img src="25.jpg"></div>
-
 <h2>📢 Teil 03 - Ansagen 56-60</h2>
 <div class="card"><img src="26.jpg"></div>
-
-</body>
-</html>order-radius:15px}
-</style>
-</head>
-<body>
-<h1>🇩🇪 Telc B2 - Hören ❤️</h1>
-
-<h2>🎧 Teil 01 - Nachrichten 41-45</h2>
-<div class="card"><img src="22.jpg"></div>
-<div class="card"><img src="24.jpg"></div>
-
-<h2>🎙️ Teil 02 - Interview 46-55</h2>
-<div class="card"><img src="25.jpg"></div>
-
-<h2>📢 Teil 03 - Ansagen 56-60</h2>
-<div class="card"><img src="26.jpg"></div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aziza ❤️ Hören Training</title>
-<style>
-body{margin:0;background:#ff6fa5;font-family:Arial;padding:15px}
-h1{text-align:center;color:white;margin:5px}
-.sub{text-align:center;color:white;margin-bottom:15px}
-.card{background:white;border-radius:20px;padding:15px;margin-bottom:20px}
-.card img{width:100%;border-radius:15px}
-.card h2{margin:10px 0}
-.q{border:1px solid #eee;border-radius:15px;padding:10px;margin:10px 0}
-.q p{font-weight:bold;margin:0 0 8px 0}
-button{padding:8px 14px;border-radius:20px;border:1px solid #ff2e88;background:white;cursor:pointer;margin:3px}
-button.active{background:#ff2e88;color:white}
-.check{width:100%;background:#22c55e;color:white;border:none;padding:13px;border-radius:15px;font-size:17px;font-weight:bold;margin-top:10px}
-.correct{background:#dcfce7 !important}
-.wrong{background:#fee2e2 !important}
-</style>
-</head>
-<body>
-<h1>Aziza ❤️ Hören Training</h1>
-<div class="sub">بركي على Richtig / Falsch و من بعد Check - الجملة الصحيحة غادي تولي خضرة</div>
-
-<!-- 22 -->
-<div class="card" data-answers="Richtig,Falsch">
-<img src="22.jpg">
-<h2>22. Ein Treffen bei der Integrationsbeauftragten</h2>
-<div class="q"><p>41. Die Integrationsbeauftragte lädt ein.</p>
-<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
-<div class="q"><p>43. Es geht um ein Treffen in Berlin.</p>
-<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
-<button class="check" onclick="check(this)">Check ✅</button>
-</div>
-
-<!-- 24 -->
-<div class="card" data-answers="Richtig,Richtig">
-<img src="24.jpg">
-<h2>24. Studentenparty in Frankreich</h2>
-<div class="q"><p>43. Bei einer Studentenparty in Frankreich gibt es Tote und Verletzte.</p>
-<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
-<div class="q"><p>45. Die Regierung plant eine Änderung bei der Führerschein-Probezeit.</p>
-<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
-<button class="check" onclick="check(this)">Check ✅</button>
-</div>
-
-<!-- 25 -->
-<div class="card" data-answers="Richtig,Falsch">
-<img src="25.jpg">
-<h2>25. Deutsches Filmmuseum</h2>
-<div class="q"><p>41. Das Filmmuseum ist in Frankfurt.</p>
-<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
-<div class="q"><p>43. Es gibt eine neue Ausstellung.</p>
-<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
-<button class="check" onclick="check(this)">Check ✅</button>
-</div>
-
-<script>
-function sel(b){let q=b.parentElement; q.querySelectorAll('button').forEach(x=>x.classList.remove('active')); b.classList.add('active');}
-function check(btn){
-let card=btn.closest('.card');
-let answers=card.dataset.answers.split(',');
-let qs=card.querySelectorAll('.q');
-qs.forEach((q,i)=>{
-let s=q.querySelector('.active');
-if(!s) return;
-let txt=s.textContent.includes('Richtig')?'Richtig':'Falsch';
-q.classList.remove('correct','wrong');
-q.classList.add(txt===answers[i]?'correct':'wrong');
-});
-}
-</script>
 </body>
 </html>
