@@ -3,61 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aziza - Hören Training</title>
+<title>Aziza ❤️ Hören Training</title>
 <style>
-body{font-family:Arial;background:#fff8f0;margin:0;padding:15px}
-h1{text-align:center;color:#d63384}
-.card{background:white;border-radius:15px;padding:15px;margin:15px 0;box-shadow:0 2px 10px #ddd}
-.card img{width:100%;border-radius:12px}
-.q{margin:12px 0;padding:10px;border:1px solid #eee;border-radius:10px}
-button{padding:8px 14px;border-radius:20px;border:1px solid #d63384;background:white;cursor:pointer;margin:3px}
-button.selected{background:#d63384;color:white}
-.check{width:100%;background:#28a745;color:white;border:none;padding:12px;border-radius:10px;font-size:16px;margin-top:10px}
-.correct{background:#d4edda!important;border-color:green}
-.wrong{background:#f8d7da!important;border-color:red}
-.result{font-weight:bold;text-align:center;margin-top:10px}
+body{margin:0;background:#ff6fa5;font-family:Arial;padding:15px}
+h1{text-align:center;color:white;margin:5px}
+.sub{text-align:center;color:white;margin-bottom:15px}
+.card{background:white;border-radius:20px;padding:15px;margin-bottom:20px}
+.card img{width:100%;border-radius:15px}
+.card h2{margin:10px 0}
+.q{border:1px solid #eee;border-radius:15px;padding:10px;margin:10px 0}
+.q p{font-weight:bold;margin:0 0 8px 0}
+button{padding:8px 14px;border-radius:20px;border:1px solid #ff2e88;background:white;cursor:pointer;margin:3px}
+button.active{background:#ff2e88;color:white}
+.check{width:100%;background:#22c55e;color:white;border:none;padding:13px;border-radius:15px;font-size:17px;font-weight:bold;margin-top:10px}
+.correct{background:#dcfce7 !important}
+.wrong{background:#fee2e2 !important}
 </style>
 </head>
 <body>
 <h1>Aziza ❤️ Hören Training</h1>
-<p style="text-align:center">اختاري Richtig / Falsch و من بعد بركي على Check<br>الجملة الصحيحة غادي تولي خضرة</p>
-<div class="card" id="kod24">
-<h2>24. Studentenparty in Frankreich</h2>
-<img src="24.jpg">
-<p><b>القصة:</b> حفلة الطلبة + تغيير البرمي</p>
-<div class="q" data-answer="falsch"><b>43.</b> Bei einer Studentenparty in Frankreich gibt es Tote und Verletzte.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>45.</b> Die Regierung plant eine Änderung bei der Führerschein-Probezeit.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<button class="check" onclick="check('kod24')">Check ✅</button><div class="result"></div>
-</div>
-<div class="card" id="kod25">
-<h2>25. Deutsches Filmmuseum</h2>
-<img src="25.jpg">
-<p><b>القصة:</b> الناس ديال الطريق + متحف السينما</p>
-<div class="q" data-answer="richtig"><b>42.</b> Berufspendler kritisieren unnötige Wartezeiten und Kosten.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>42.</b> Das Deutsche Filmmuseum möchte die Besucherzahlen erhöhen.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<button class="check" onclick="check('kod25')">Check ✅</button><div class="result"></div>
-</div>
-<div class="card" id="kod22">
-<h2>22. Ein Treffen bei der Integrationsbeauftragten</h2>
+<div class="sub">بركي على Richtig / Falsch و من بعد Check - الجملة الصحيحة غادي تولي خضرة</div>
+
+<!-- 22 -->
+<div class="card" data-answers="Richtig,Falsch">
 <img src="22.jpg">
-<p><b>القصة:</b> اجتماع الاندماج + الأكل + الوزن</p>
-<div class="q" data-answer="richtig"><b>41.</b> Ein Treffen bei der Integrationsbeauftragten soll die Integration verbessern.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>43.</b> Untersuchung zum Essverhalten zeigt: Viele haben Gewichtsprobleme.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>45.</b> Später Bestattungsritus für Mahatma Gandhi<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<button class="check" onclick="check('kod22')">Check ✅</button><div class="result"></div>
+<h2>22. Ein Treffen bei der Integrationsbeauftragten</h2>
+<div class="q"><p>41. Die Integrationsbeauftragte lädt ein.</p>
+<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
+<div class="q"><p>43. Es geht um ein Treffen in Berlin.</p>
+<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
+<button class="check" onclick="check(this)">Check ✅</button>
 </div>
-<div class="card" id="kod1">
-<h2>1. Frau Jürgens - Die richtigen Sätze sind GRÜN</h2>
-<div class="q" data-answer="richtig"><b>41.</b> Frau Jürgens tritt wegen Streitigkeiten zurück.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>42.</b> Die Filme werden in den Kinos der Stadt gezeigt.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>43.</b> Der öffentliche Nahverkehr funktioniert noch nicht störungsfrei.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>44.</b> Wildes Camping ist im In- und Ausland nur bedingt zugelassen.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<div class="q" data-answer="richtig"><b>45.</b> Die Temperaturen steigen in den nächsten Tagen an.<br><button onclick="sel(this,'falsch')">❌ Falsch</button> <button onclick="sel(this,'richtig')">✅ Richtig</button></div>
-<button class="check" onclick="check('kod1')">Check ✅</button><div class="result"></div>
+
+<!-- 24 -->
+<div class="card" data-answers="Richtig,Richtig">
+<img src="24.jpg">
+<h2>24. Studentenparty in Frankreich</h2>
+<div class="q"><p>43. Bei einer Studentenparty in Frankreich gibt es Tote und Verletzte.</p>
+<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
+<div class="q"><p>45. Die Regierung plant eine Änderung bei der Führerschein-Probezeit.</p>
+<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
+<button class="check" onclick="check(this)">Check ✅</button>
 </div>
+
+<!-- 25 -->
+<div class="card" data-answers="Richtig,Falsch">
+<img src="25.jpg">
+<h2>25. Deutsches Filmmuseum</h2>
+<div class="q"><p>41. Das Filmmuseum ist in Frankfurt.</p>
+<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
+<div class="q"><p>43. Es gibt eine neue Ausstellung.</p>
+<button onclick="sel(this)">❌ Falsch</button><button onclick="sel(this)">✅ Richtig</button></div>
+<button class="check" onclick="check(this)">Check ✅</button>
+</div>
+
 <script>
-function sel(btn,val){let q=btn.parentElement;q.querySelectorAll('button').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');q.dataset.user=val;}
-function check(id){let card=document.getElementById(id);let qs=card.querySelectorAll('.q');let ok=0;qs.forEach(q=>{let user=q.dataset.user;let ans=q.dataset.answer;q.classList.remove('correct','wrong');if(user===ans){q.classList.add('correct');ok++;}else{q.classList.add('wrong');}});card.querySelector('.result').innerText='جاوبتي '+ok+' من '+qs.length+' صح ❤️';}
+function sel(b){let q=b.parentElement; q.querySelectorAll('button').forEach(x=>x.classList.remove('active')); b.classList.add('active');}
+function check(btn){
+let card=btn.closest('.card');
+let answers=card.dataset.answers.split(',');
+let qs=card.querySelectorAll('.q');
+qs.forEach((q,i)=>{
+let s=q.querySelector('.active');
+if(!s) return;
+let txt=s.textContent.includes('Richtig')?'Richtig':'Falsch';
+q.classList.remove('correct','wrong');
+q.classList.add(txt===answers[i]?'correct':'wrong');
+});
+}
 </script>
 </body>
 </html>
